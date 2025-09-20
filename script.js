@@ -1,6 +1,4 @@
 function createProjectBlock(heading_text, text) {
-    item = document.createElement("li");
-
     article = document.createElement("article");
     article.setAttribute("class", "project_block");
     
@@ -25,11 +23,10 @@ function createProjectBlock(heading_text, text) {
     article.appendChild(p);
     article.appendChild(icon_container);
 
-    item.appendChild(article);
-    return item;
+    return article;
 }
 
-projects_list = document.querySelector(".projects > ul");
+projects_list = document.querySelector(".projects");
 
 projects_list.appendChild(createProjectBlock("Super Cool Project", "Wazzuuuppppp"));
 projects_list.appendChild(createProjectBlock("Super Cool Project", "Wazzuuuppppp"));
