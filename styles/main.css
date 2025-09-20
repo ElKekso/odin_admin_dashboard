@@ -51,9 +51,10 @@ body, html {
     grid-template-rows: 1fr 1fr;
 }
 
-.main_container > .projects_container {
+.projects_container {
     grid-area: 1 / 1 / -1 / 2;
 }
+
 
 
 
