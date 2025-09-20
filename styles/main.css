@@ -1,0 +1,11 @@
+.header_container {
+    border: 1px solid blue;
+}
+
+.sidebar_container {
+    border: 1px solid red;
+}
+
+.main_container {
+    border: 1px solid green;
+}
