@@ -40,6 +40,37 @@ body, html {
     display: grid;
 }
 
+.top_bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
+}
+
+.searchbar_container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 30fr;
+
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+
+}
+
+.profile_alarm_container {
+    display: grid;
+    grid-auto-flow: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 5%
+}
+
+.profile_alarm_container > img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
 /* sidebar */
 
 .sidebar_container {
