@@ -32,12 +32,29 @@ body, html {
     grid-template-rows: 1fr 5fr;
 }
 
+/* general classes */
+
+.profile_picture_small {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.profile_picture_big {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
 /* header */
 
 .header_container {
     grid-area: 1 / 2 / 2 / 3;
     
     display: grid;
+
+    padding-left: 2.5%;
+    padding-right: 4%;
 }
 
 .top_bar {
@@ -52,7 +69,7 @@ body, html {
     grid-template-columns: 1fr 30fr;
 
     align-items: center;
-    padding: 0px 5% 0px 5%;
+    padding-right: 5%;
 
 }
 
@@ -65,10 +82,23 @@ body, html {
     gap: 5%
 }
 
-.profile_alarm_container > img{
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+
+.bottom_bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1.5fr 10fr 6fr;
+}
+
+.welcome_text_container {
+    display: grid;
+    align-content: center;
+}
+
+.bar_buttons_container {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: space-around;
 }
 
 /* sidebar */
