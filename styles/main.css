@@ -15,6 +15,12 @@
 
 /* actual styling */
 
+:root {
+    --box-shadow: hsla(79 0% 0% / 0.3);
+    --box-shadow-inset: hsl(47 77.8% 59.6%);
+    --background-main-container: hsl(216 11.2% 90%);
+}
+
 body, html {
     height: 100%;
 }
@@ -50,6 +56,8 @@ body, html {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 40px 40px 80px 20px;
+
+    background-color: var(--background-main-container);
 }
 
 .main_container > * {
@@ -77,7 +85,17 @@ body, html {
 
 .project_block {
     display: grid;
-    grid-template-rows: 1.5fr 4fr 1.5fr
+    grid-template-rows: 1.5fr 4fr 1.5fr;
+
+    border-radius: 10px;
+    box-shadow:
+        inset 3px 0px var(--box-shadow-inset),
+        2px 2px var(--box-shadow);
+
+}
+
+.project_block > h2 {
+    align-self: self-end;
 }
 
 .project_block > div {
