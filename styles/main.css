@@ -68,9 +68,30 @@ body, html {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 400px);
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
     gap: 30px;
+    justify-items: stretch;
+
+    overflow: auto;
 }
+
+.project_block {
+    display: grid;
+    grid-template-rows: 1.5fr 4fr 1.5fr
+}
+
+.project_block > div {
+    display: grid;
+    grid-auto-flow: column;
+
+    align-content: center;
+    justify-content: right;
+    gap: 5%;
+
+    padding-right: 5%;
+}
+
+
 
 
 
