@@ -108,7 +108,42 @@ body, html {
 
     display: flex;
     flex-direction: column;
+
+    padding-left: 5%;
+    padding-top: 5%;
 }
+
+.logo_container {
+    padding-bottom: 40px;
+}
+
+.logo_container > * {
+    padding-right: 25px;
+}
+
+.sidebar_container ul {
+    display: grid;
+    gap: 15px;
+}
+
+.navigation_container {
+    padding-bottom: 45px;
+}
+
+.sidebar_container li,
+.logo_container{
+    display: grid;
+    grid-auto-flow: column;
+
+    justify-content: left;
+    align-items: center;
+}
+
+.sidebar_container li > * {
+    padding-right: 30px;
+}
+
+
 
 /* main */
 
