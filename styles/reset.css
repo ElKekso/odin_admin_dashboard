@@ -55,11 +55,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*
-  11. personal. remove all list styling
+  11. personal. remove all list styling + everything has same font
 */
 
 ul,
 ol {
     list-style-type: none;
     padding: 0;    
+}
+
+body * {
+  font: inherit;
 }
