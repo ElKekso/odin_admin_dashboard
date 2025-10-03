@@ -1,4 +1,4 @@
-.header_container,
+/*.header_container,
 .header_container * {
     border: 2px solid blue;
 }
@@ -11,17 +11,22 @@
 .main_container,
 .main_container * {
     border: 2px solid green;
-}
+} */
 
 /* actual styling */
 
 :root {
-    --box-shadow: hsla(79 0% 0% / 0.3);
+    --box-shadow: hsla(79 0% 0% / 0.1);
+    --box-shadow-inset: 3px;
+
+    --box-shadow-padding: 15px;
+
     --project-box-side: hsl(41, 91%, 58%);
-    --project-box-background: hsl(0 0% 100%);
+    --white-background: hsl(0 0% 100%);
     --background-main-container: hsl(216 11.2% 90%);
 
     --announcement-split-grey: hsl(360 0% 60.3%);
+    --main-border-radius: 10px;
 }
 
 body, html {
@@ -157,6 +162,8 @@ body, html {
     grid-template-rows: repeat(2, 400px);
     padding: 40px 40px 80px 20px;
 
+    gap: 25px;
+
     background-color: var(--background-main-container);
 }
 
@@ -178,7 +185,8 @@ body, html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     row-gap: 0;
-    
+
+  
     gap: 30px;
 
     overflow: auto;
@@ -190,11 +198,7 @@ body, html {
 
     height: clamp(200px, 100%, 400px);
 
-
-    border-radius: 10px;
-    box-shadow: 2px 2px var(--box-shadow);
-
-    background: linear-gradient(to right, var(--project-box-side) 2.5%, var(--project-box-background) 0%)
+    background: linear-gradient(to right, var(--project-box-side) 2.5%, var(--white-background) 0%)
 }
 
 .project_block > h2 {
@@ -214,6 +218,7 @@ body, html {
 
 .announcements_container {
     overflow: auto;
+    
 }
 
 .announcements_container > div {
@@ -222,7 +227,8 @@ body, html {
 
     padding: 15px;
 
-    background-color: white;
+    background-color: var(--white-background);
+    border-radius: var(--main-border-radius);
 
     overflow: auto;
 }
@@ -239,13 +245,19 @@ body, html {
 }
 
 .trending_container {
-    display: grid;
+    
 
     overflow: auto;
-
 }
 
-.trending_container > div{
+.trending_container > div {
+    display: grid;
+
+    background-color: var(--white-background);
+    border-radius: var(--main-border-radius);
+}
+
+.trending_container > div > div{
     display: grid;
     grid-auto-flow: column;
 
@@ -253,8 +265,23 @@ body, html {
     justify-content: left;
 
     padding-left: 20px;
-
     gap: 15px;
+    
+}
+
+/* shadows for projects, announcements and trending*/
+.announcements_container ,
+.trending_container,
+.projects_container > div{
+    padding-right: var(--box-shadow-padding);
+    padding-bottom: var(--box-shadow-padding);
+}
+
+.project_block,
+.announcements_container > div,
+.trending_container > div{
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--box-shadow-inset) var(--box-shadow-inset) 10px 2px var(--box-shadow);
 }
 
 
