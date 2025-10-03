@@ -17,7 +17,8 @@
 
 :root {
     --box-shadow: hsla(79 0% 0% / 0.3);
-    --box-shadow-inset: hsl(47 77.8% 59.6%);
+    --project-box-side: hsl(41, 91%, 58%);
+    --project-box-background: hsl(0 0% 100%);
     --background-main-container: hsl(216 11.2% 90%);
 
     --announcement-split-grey: hsl(360 0% 60.3%);
@@ -176,8 +177,8 @@ body, html {
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    
     gap: 30px;
-    justify-items: stretch;
 
     overflow: auto;
 }
@@ -186,11 +187,13 @@ body, html {
     display: grid;
     grid-template-rows: 1.5fr 4fr 1.5fr;
 
-    border-radius: 10px;
-    box-shadow:
-        inset 3px 0px var(--box-shadow-inset),
-        2px 2px var(--box-shadow);
+    height: clamp(200px, 100%, 500px);
+    
 
+    border-radius: 10px;
+    box-shadow: 2px 2px var(--box-shadow);
+
+    background: linear-gradient(to right, var(--project-box-side) 2.5%, var(--project-box-background) 0%)
 }
 
 .project_block > h2 {
