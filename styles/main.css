@@ -87,6 +87,18 @@ body {
 
 }
 
+.searchbar_container > input[type=text] {
+    height: 40px;
+    
+    text-indent: 10px;
+    padding-right: 10px;
+
+    background-color: var(--background-main-container);
+
+    border-style: none;
+    border-radius: 20px;
+}
+
 .profile_alarm_container {
     display: grid;
     grid-auto-flow: column;
@@ -101,6 +113,7 @@ body {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1.5fr 10fr 6fr;
+    align-items: center;
 }
 
 .welcome_text_container {
